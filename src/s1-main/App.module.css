@@ -27,7 +27,7 @@
     /*align-items: center;*/
     /*margin: 0 auto;*/
     /*height: 100%;*/
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 
 .hw > div {
@@ -39,12 +39,12 @@
 
 .hwTitle {
     color: rgb(0, 0, 0);
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     font-size: 22px;
     font-weight: 600;
     line-height: 27px;
     letter-spacing: 0%;
     text-align: left;
 
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 }

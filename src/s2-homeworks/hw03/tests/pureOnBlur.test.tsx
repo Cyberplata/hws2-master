@@ -1,9 +1,9 @@
 import React from 'react'
-import {pureOnBlur} from '../GreetingContainer'
+import {pureOnBlur, SetErrorType} from '../GreetingContainer'
 
-let name: any
-let error: any
-const setError = (a: any) => {
+let name: string
+let error: string | null
+const setError = (a: string | null) => {
     error = a
 }
 
