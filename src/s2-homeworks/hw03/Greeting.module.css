@@ -2,23 +2,80 @@
 }
 
 .inputAndButtonContainer {
+    display: flex;
+    gap: 12px;
+    width: 372px;
+    height: 36px;
+
+    margin: 10px 0;
 }
 
 .error {
+    color: rgb(204, 0, 0);
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0%;
+    text-align: left;
+
+    margin-top: 8px;
 }
 
 .input {
+    width: 372px;
+    height: 36px;
+    box-sizing: border-box;
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 5px;
+
+    color: rgb(0, 0, 0);
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: left;
+
+    padding: 8px 12px;
 }
 
 .input:focus {
+    outline: none; /* Удаление стандартного контура */
+    border: 1px solid rgb(0, 123, 255); /* Замена стандартного обрамления на свой */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Добавление тени для индикации фокуса */
 }
 
 .errorInput {
+    width: 372px;
+    height: 36px;
+    box-sizing: border-box;
+    border: 1px solid rgb(204, 0, 0);
+    border-radius: 5px;
 }
 
 .button {
-}
+    /*width: 78px;*/
+    cursor: pointer;
+    height: 36px;
+    border-radius: 3px;
+    background: rgb(0, 102, 204);
+    opacity: 0.5;
 
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: left;
+
+    padding: 8px 24px;
+    margin: 0;
+}
+.button:first-letter {
+    text-transform: uppercase
+}
 .button:focus {
 }
 
@@ -29,7 +86,23 @@
 }
 
 .text {
+    color: rgba(0, 0, 0, 0.5);
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0%;
+    text-align: left;
 }
 
 .greeting {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0%;
+    text-align: left;
+
+    /*margin-top: 10px;*/
 }

@@ -28,6 +28,10 @@
     /*margin: 0 auto;*/
     /*height: 100%;*/
     /*border: 1px solid red;*/
+    /*margin-top: -326px;*/
+
+    margin-top: 10px; /* Отступ между первой линией и контентом */
+    margin-bottom: 216px; /* Отступ между контентом и второй линией */
 }
 
 .hw > div {
@@ -46,5 +50,17 @@
     letter-spacing: 0%;
     text-align: left;
 
-    margin-bottom: 40px;
+    /*margin-bottom: 40px;*/
+    margin-bottom: 10px; /* Отступ между заголовком и первой линией */
+}
+
+.line {
+    width: 100%;
+    border: 1px solid rgb(217, 217, 217);
+    /*margin-top: 10px; !* Отступ между заголовком и первой линией *!*/
+    /*margin-bottom: 336px; !* Отступ между первой линией и вторым контентным блоком *!*/
+}
+
+.App > :not(:last-child) {
+    margin-bottom: 40px; /* Отступ между компонентами HW1, HW2, HW3 и т.д., кроме последнего */
 }

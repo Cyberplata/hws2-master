@@ -44,6 +44,7 @@ const HW3 = () => {
         <div id={'hw3'}>
             <div className={s2.hwTitle}>Homework #3</div>
             {/*для автоматической проверки дз (не менять)*/}
+            <div className={s2.line}></div> {/* Первая линия */}
 
             <div className={s2.hw}>
                 <GreetingContainer
@@ -51,6 +52,7 @@ const HW3 = () => {
                     addUserCallback={addUserCallback}
                 />
             </div>
+            <div className={s2.line}></div> {/* Вторая линия */}
         </div>
     )
 }

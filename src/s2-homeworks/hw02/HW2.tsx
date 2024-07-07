@@ -63,6 +63,7 @@ function HW2() {
     return (
         <div id={'hw2'}>
             <div className={s2.hwTitle}>Homework #2</div>
+            <div className={s2.line}></div> {/* Первая линия */}
             <div className={s2.hw}>
                 <Affairs
                     data={filteredAffairs}
@@ -71,6 +72,7 @@ function HW2() {
                     filter={filter}
                 />
             </div>
+            <div className={s2.line}></div> {/* Вторая линия */}
         </div>
     )
 }
