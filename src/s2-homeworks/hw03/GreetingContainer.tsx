@@ -21,6 +21,7 @@ export const pureAddUser = (
     if (name.trim() !== '') {
         addUserCallback(name.trim())
         setName('')
+        setError(''); // Удаляем ошибку после успешного добавления пользователя
     } else {
         setError('Ошибка! Введите имя!')
     }
@@ -29,12 +30,15 @@ export const pureAddUser = (
 export const pureOnBlur = (name: string, setError: SetErrorType) => { // если имя пустое - показать ошибку
     if (name.trim() === '') {
         setError('Ошибка! Введите имя!')
+    } else {
+        setError(''); // Убираем ошибку, если поле не пустое
     }
 }
 
 export const pureOnEnter = (e: KeyboardEvent<HTMLInputElement>, addUser: () => void) => { // если нажата кнопка Enter - добавить
     if (e.key === 'Enter') {
         addUser()
+        console.log(e.key)
     }
 }
 
@@ -51,8 +55,12 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     const [error, setError] = useState<string | null>('') // need to fix any
 
     const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => { // need to fix any
+        console.log(error)
         setName(e.currentTarget.value) // need to fix
-        setError(null) // Убираем ошибку при вводе
+        if (error) {
+            setError(''); // Убираем ошибку при вводе
+        }
+        // setError(null) // Убираем ошибку при вводе
     }
     const addUser = () => {
         pureAddUser(name, setError, setName, addUserCallback)
