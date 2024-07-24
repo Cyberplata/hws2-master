@@ -11,7 +11,7 @@ const Stand = () => {
     const [stateForAllCheckboxes, setChecked] = useState<boolean>(false)
 
     return (
-        <div id={'hw4-stand'} className={s.stand}>
+        <div id={'hw4-stand'} className={`${s.stand} stand-overwrite`}>
             <div className={s.inputs}>
                 {/*совместим со старым кодом:*/}
                 <div>

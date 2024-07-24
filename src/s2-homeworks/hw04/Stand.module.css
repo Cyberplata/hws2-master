@@ -1,8 +1,18 @@
 .stand {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
+
+/* Добавьте это правило в ваш CSS-файл */
+/*.stand-overwrite > div {*/
+/*    flex-direction: row !important;*/
+/*}*/
+/* Добавьте это правило в ваш CSS-файл */
+/*:global(.stand-overwrite) > div {*/
+/*    flex-direction: row !important;*/
+/*}*/
 
 .inputs {
     display: flex;
