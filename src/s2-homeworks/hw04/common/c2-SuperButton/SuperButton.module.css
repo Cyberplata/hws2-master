@@ -1,36 +1,85 @@
 .button {
+    width: 132px;
+    /*height: 30px;*/
+    border-radius: 3px;
+    padding: 5px 24px;
+    /*overflow: hidden;*/
+    /*background: rgb(0, 102, 204);*/
+
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    cursor: pointer;
 }
 
 .disabled {
+    background: rgb(0, 77, 153);
+    opacity: 0.5;
+
+    color: rgb(0, 46, 92);
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+
+    white-space: nowrap;
 }
 
 .secondary {
+    width: 176px;
+    /*box-sizing: border-box;*/
+    border: 1px solid rgb(0, 102, 204);
+
+    color: rgb(0, 102, 204);
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
 }
 
 .default {
+    /*background: rgb(28, 245, 33);*/
+    background: rgb(0, 102, 204);
 }
 
 .red {
+    background: rgb(204, 20, 57);
 }
 
 .default:hover {
+    width: 168px;
+    background: rgb(0, 128, 255);
 }
 
 .red:hover {
+    width: 168px;
+    background: rgb(255, 26, 71);
 }
 
 .secondary:hover {
+    width: 168px;
+    background: rgb(229, 240, 250);
 }
 
 
 .default:active {
+    width: 150px;
+    background: rgb(0, 89, 179);
 }
 
 .secondary:active {
+    width: 150px;
+    background: rgb(201, 229, 255);
 }
 
 .red:active {
+    width: 150px;
+    background: rgb(179, 18, 50);
 }
 
 .button:disabled {
+    cursor: default;
 }

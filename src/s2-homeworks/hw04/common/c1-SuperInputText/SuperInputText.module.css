@@ -33,10 +33,7 @@
 }
 
 .errorInput:focus {
-    /*color: blueviolet;*/
     background-color: #fabebe;
-    /*border: 1px solid rgb(2, 238, 10);*/
-    /*margin: 20px;*/
 }
 
 .error {
