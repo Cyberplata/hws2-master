@@ -14,9 +14,12 @@ const HW4 = () => {
         <div id={'hw4'}>
             <div className={s2.hwTitle}>Homework #4</div>
             {/*демонстрация возможностей компонент:*/}
+            <div className={s2.line}></div> {/* Первая линия */}
+
             <div className={s2.hw}>
                 <Stand />
             </div>
+            <div className={s2.line}></div> {/* Вторая линия */}
         </div>
     )
 }
