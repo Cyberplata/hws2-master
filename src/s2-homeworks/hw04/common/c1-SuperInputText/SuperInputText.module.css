@@ -23,6 +23,9 @@
 }
 
 .superInput {
+    /*margin: 10px;*/
+    background-color: #0429c4;
+    color: #8ea0f5
 }
 
 .errorInput {
@@ -33,6 +36,7 @@
 }
 
 .errorInput:focus {
+    border: #5975f1 solid 2px;
     background-color: #fabebe;
 }
 
