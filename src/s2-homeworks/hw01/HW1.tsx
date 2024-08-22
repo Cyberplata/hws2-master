@@ -4,6 +4,7 @@ import MessageSender from './message-sender/MessageSender'
 import s2 from '../../s1-main/App.module.css'
 import FriendMessage from './friend-message/FriendMessage'
 import avatar from './avatar.png'
+import lebron from './LeBron_James.jpg'
 
 /*
 * 1 - описать тип MessageType
@@ -30,27 +31,35 @@ export type MessageDoubleType = {
     time: string
 }
 
+// Функция для получения текущего времени в формате HH:MM
+const getCurrentTime = () => {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    return `${hours}:${minutes}`;
+};
+
 // структуру объекта не менять
 export const message0: MessageType = {
     id: 0,
     user: {
         avatar: avatar, // можно менять
-        name: 'Some Name',  // можно менять
+        name: 'Brad Pitt',  // можно менять
     },
     message: {
-        text: 'some textsome textsome textsome textsome textsome textsome text', // можно менять
-        time: '22:00', // можно менять
+        text: 'Hi, how was yesterday\'s match against Boston Celtics?', // можно менять
+        time: getCurrentTime(), // можно менять
     },
 }
 export const friendMessage0: MessageType = {
     id: 100,
     user: {
-        avatar: avatar, // можно менять
-        name: 'Friend Name', // можно менять
+        avatar: lebron, // можно менять
+        name: 'Lebron James', // можно менять
     },
     message: {
-        text: 'зеркальное сообщение для тренировки css', // можно менять
-        time: '22:00', // можно менять
+        text: 'Hi, Boston was on a roll, both offensively and defensively, but I still scored a double-double.', // можно менять
+        time: getCurrentTime(), // можно менять
     },
 }
 
@@ -61,11 +70,8 @@ const HW1 = () => {
             <div className={s2.line}></div> {/* Первая линия */}
             <div className={s2.hw}>
                 {/*проверка отображения (не менять)*/}
-                <div>
                     <Message message={message0}/>
                     <FriendMessage message={friendMessage0}/>
-                </div>
-
                 {/*для автоматической проверки дз (не менять)*/}
                 <MessageSender M={Message}/>
             </div>
