@@ -68,7 +68,7 @@ const HW1 = () => {
         <div id={'hw1'}>
             <div className={s2.hwTitle}>Homework № 1</div>
             <div className={s2.line}></div> {/* Первая линия */}
-            <div className={s2.hw}>
+            <div className={s2.hw1}>
                 {/*проверка отображения (не менять)*/}
                     <Message message={message0}/>
                     <FriendMessage message={friendMessage0}/>

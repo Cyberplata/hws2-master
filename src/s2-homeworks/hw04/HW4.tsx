@@ -16,7 +16,7 @@ const HW4 = () => {
             {/*демонстрация возможностей компонент:*/}
             <div className={s2.line}></div> {/* Первая линия */}
 
-            <div className={s2.hw}>
+            <div className={s2.hw4}>
                 <Stand />
             </div>
             <div className={s2.line}></div> {/* Вторая линия */}

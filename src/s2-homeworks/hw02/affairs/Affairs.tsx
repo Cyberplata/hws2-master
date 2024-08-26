@@ -15,6 +15,10 @@ function Affairs(props: AffairsPropsType) {
         // need to fix
         props.setFilter('all')
     }
+    const setLow = () => {
+        // need to fix
+        props.setFilter('low')
+    }
     const setHigh = () => {
         // need to fix
         props.setFilter('high')
@@ -22,10 +26,6 @@ function Affairs(props: AffairsPropsType) {
     const setMiddle = () => {
         // need to fix
         props.setFilter('middle')
-    }
-    const setLow = () => {
-        // need to fix
-        props.setFilter('low')
     }
 
     const cnAll = s.button + ' ' + s.all + (props.filter === 'all' ? ' ' + s.active : '')
@@ -52,6 +52,13 @@ function Affairs(props: AffairsPropsType) {
                     All
                 </button>
                 <button
+                    id={'hw2-button-low'}
+                    onClick={setLow}
+                    className={cnLow}
+                >
+                    Low
+                </button>
+                <button
                     id={'hw2-button-high'}
                     onClick={setHigh}
                     className={cnHigh}
@@ -64,13 +71,6 @@ function Affairs(props: AffairsPropsType) {
                     className={cnMiddle}
                 >
                     Middle
-                </button>
-                <button
-                    id={'hw2-button-low'}
-                    onClick={setLow}
-                    className={cnLow}
-                >
-                    Low
                 </button>
             </div>
             <div className={s.affairs}>{mappedAffairs}</div>

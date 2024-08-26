@@ -90,6 +90,9 @@
     font-weight: 600;
     line-height: 20px;
     text-align: center;
+
+    display: flex;
+    justify-content: center;
 }
 
 .default {

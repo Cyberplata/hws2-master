@@ -35,16 +35,24 @@
     font-size: 14px;
     line-height: 20px;
     cursor: pointer;
+
+    display: flex;
 }
 
 .button:active {
     background: var(--color);
     color: white;
+
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .active {
     background: var(--color);
     color: white;
+
+    /*display: flex;*/
+    /*flex-direction: column-reverse;*/
 }
 
 .affairs {
@@ -52,4 +60,5 @@
     gap: 17px;
     flex-wrap: wrap;
     max-width: 450px;
+    /*flex-direction: column-reverse;*/
 }

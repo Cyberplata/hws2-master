@@ -3,7 +3,7 @@
     align-items: center;
     width: 185px;
 
-    border: 1.5px solid var(--color);
+    border: 2px solid var(--color);
     border-radius: 5px;
 }
 
@@ -13,6 +13,12 @@
     justify-content: center;
     width: 145px;
     height: 37px;
+
+    color: rgb(0, 0, 0);
+    font-family: Montserrat, 'sans-serif';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
 }
 
 .closeButton {
@@ -24,7 +30,7 @@
 
     background-color: transparent;
     border: none;
-    border-left: 1.5px solid var(--color);
+    border-left: 2px solid var(--color);
 
     font-weight: 900;
     cursor: pointer;
