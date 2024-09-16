@@ -17,7 +17,7 @@
     font-weight: 500;
     line-height: 20px;
 
-    border: 3px solid #9898fd;
+    /*border: 3px solid #9898fd;*/
 }
 
 .inputWrapper {
@@ -26,7 +26,7 @@
 
 .superInput {
     /*margin: 10px;*/
-    background-color: #0429c4;
+    background-color: #ffffff;
     color: #8ea0f5
 }
 
@@ -39,10 +39,12 @@
 
 .errorInput:focus {
     border: #5975f1 solid 2px;
-    background-color: #fabebe;
+    /*background-color: #fabebe;*/
 }
 
 .error {
+    font-family: Montserrat, sans-serif;
+
     color: rgb(204, 20, 57);
     font-size: 10px;
     line-height: 12px;

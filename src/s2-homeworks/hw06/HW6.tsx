@@ -26,6 +26,8 @@ const HW6 = () => {
         <div id={'hw6'}>
             <div className={s2.hwTitle}>Homework #6</div>
 
+            <div className={s2.line}></div> {/* Первая линия */}
+
             {/*демонстрация возможностей компоненты:*/}
             <div className={s2.hw}>
                 <div className={s.editableSpanContainer}>
@@ -53,6 +55,8 @@ const HW6 = () => {
                     </SuperButton>
                 </div>
             </div>
+
+            <div className={s2.line}></div> {/* Вторая линия */}
         </div>
     )
 }
