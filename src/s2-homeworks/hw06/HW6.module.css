@@ -1,4 +1,11 @@
 .buttonsContainer {
+    display: flex;
+    gap: 24px;
+
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
 }
 
 .editableSpanContainer {
