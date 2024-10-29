@@ -6,6 +6,8 @@
     font-size: 14px;
     font-weight: 600;
     line-height: 20px;
+
+    padding-bottom: 230px; /* Отступ между заголовком и второй линией */
 }
 
 .editableSpanContainer {
