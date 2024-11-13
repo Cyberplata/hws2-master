@@ -3,6 +3,15 @@
     /*flex-direction: column;*/
     /*gap: 20px;*/
     color: rgb(0, 0, 0);
+
+    /*height: 30px;*/
+    /*width: 30px;*/
+
+    /*appearance: none;*/
+    cursor: pointer;
+    /*border-radius: 50%;*/
+    /*outline: none;*/
+    /*background-color: #9cf39c;*/
 }
 
 .radio::before {
