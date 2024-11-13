@@ -1,4 +1,6 @@
 .container {
     display: flex;
     gap: 124px;
+
+    padding-bottom: 200px;
 }

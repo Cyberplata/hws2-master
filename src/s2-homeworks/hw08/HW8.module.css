@@ -1,23 +1,53 @@
 .item {
+
 }
 
 .item:last-of-type {
 }
 
 .users {
+    max-width: 100%;
+    width: 100%;
 }
 
 .buttonsContainer {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    /*margin-bottom: 18px;*/
+    /*margin-top: 34px;*/
+    margin: 34px 0 18px 0;
 }
 
 .container {
+    width: 100%;
 }
 
 .thead {
+    background: rgb(229, 229, 229);
+    max-width: 100%;
+    width: 100%;
+
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
 }
 
 .nameCol {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    /*font-weight: 300;*/
+    line-height: 16px;
+    padding: 16px;
 }
 
 .ageCol {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+
+    /*display: flex;*/
+    /*justify-content: flex-start;*/
 }

@@ -24,8 +24,8 @@ const HW7 = () => {
         <div id={'hw7'}>
             <div className={s2.hwTitle}>Homework #7</div>
 
-            <div className={s2.line}></div>
             {/* Первая линия */}
+            <div className={s2.line}></div>
 
             {/*демонстрация возможностей компонент:*/}
             <div className={s2.hw}>
@@ -50,8 +50,8 @@ const HW7 = () => {
                 </div>
             </div>
 
-            <div className={s2.line}></div>
             {/* Вторая линия */}
+            <div className={s2.line}></div>
         </div>
     )
 }

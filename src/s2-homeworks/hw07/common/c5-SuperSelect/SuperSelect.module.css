@@ -1,10 +1,10 @@
 .select {
     display: flex;
-    gap: 100px;
+    /*gap: 100px;*/
     /*color: #ff1818;*/
 
     width: 165px;
-    /*height: 24px;*/
+    height: 24px;
 
     font-family: Montserrat, sans-serif;
     font-size: 14px;
@@ -12,6 +12,7 @@
     line-height: 17px;
 
     cursor: pointer;
+    padding: 0 0 4px 10px;
 }
 
 .select:focus {
