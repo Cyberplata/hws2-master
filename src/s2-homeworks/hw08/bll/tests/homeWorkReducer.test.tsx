@@ -21,7 +21,17 @@ test('sort name up', () => {
         payload: 'up',
     })
 
-    expect(newState[0]._id).toBe(1)
+    // expect(newState[0]._id).toBe(1) // хуже проверка
+
+    const result = [
+        1,
+        3,
+        4,
+        5,
+        2,
+        0
+    ].filter((el, i) => el === newState[i]._id)
+    expect(result.length).toBe(newState.length) // лучше проверка
 })
 test('sort name down', () => {
     const newState = homeWorkReducer(initialState, {
