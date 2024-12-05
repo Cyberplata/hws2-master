@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {type ReactNode, useState} from 'react'
 import SuperButton from '../hw04/common/c2-SuperButton/SuperButton'
 import {restoreState} from '../hw06/localStorage/localStorage'
 import s from './Clock.module.css'
@@ -12,20 +12,23 @@ function Clock() {
     const start = () => {
         // пишут студенты // запустить часы (должно отображаться реальное время, а не +1)
         // сохранить ид таймера (https://learn.javascript.ru/settimeout-setinterval#setinterval)
+        setShow(true)
         stop()
         // const intervalId: number = +setInterval(() => {
         const timerId: number = window.setInterval(() => {
             setDate(new Date())
         },1000)
         console.log('start', timerId)
-        setTimerId(timerId)
+        // setTimerId(timerId)
     }
 
     const stop = () => {
         console.log('stop' ,timerId)
         // пишут студенты // поставить часы на паузу, обнулить ид таймера (timerId <- undefined)
+        setTimerId(undefined)
         return () => {
             clearInterval(timerId)
+            // setShow(false)
         }
     }
 
@@ -36,12 +39,26 @@ function Clock() {
         setShow(false)
     }
 
-    const stringTime = 'date->time' || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
-    const stringDate = 'date->date' || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
+    const getTwoDigitsString = (num: number) => num < 10
+        ? "0" + num
+        : num
+
+    // const stringTime = 'date->time' || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
+    const stringTime = `
+        ${getTwoDigitsString(date.getHours())}:${getTwoDigitsString(date.getMinutes())}:${getTwoDigitsString(date.getSeconds())}
+    ` || <br/>
+
+    // const stringDate = 'date->date' || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
+    const stringDate = `
+        ${getTwoDigitsString(date.getDay())}.${getTwoDigitsString(date.getMonth())}.${getTwoDigitsString(date.getFullYear())}
+    ` || <br/>
 
     // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
-    const stringDay = 'date->day' || <br/> // пишут студенты
-    const stringMonth = 'date->month' || <br/> // пишут студенты
+    // const stringDay = 'date->day' || <br/> // пишут студенты
+    const stringDay = new Intl.DateTimeFormat("en", {weekday: "long"}).format(date) || <br/>
+
+    // const stringMonth = 'date->month' || <br/> // пишут студенты
+    const stringMonth = new Intl.DateTimeFormat("en", {month: "long"}).format(date) || <br/>
 
     return (
         <div className={s.clock}>
@@ -75,14 +92,16 @@ function Clock() {
             <div className={s.buttonsContainer}>
                 <SuperButton
                     id={'hw9-button-start'}
-                    disabled={false} // пишут студенты // задизэйблить если таймер запущен
+                    // disabled={false} // пишут студенты // задизэйблить если таймер запущен
+                    disabled={show} // пишут студенты // задизэйблить если таймер запущен
                     onClick={start}
                 >
                     start
                 </SuperButton>
                 <SuperButton
                     id={'hw9-button-stop'}
-                    disabled={false} // пишут студенты // задизэйблить если таймер не запущен
+                    // disabled={false} // пишут студенты // задизэйблить если таймер не запущен
+                    disabled={!show} // пишут студенты // задизэйблить если таймер не запущен
                     onClick={stop}
                 >
                     stop
