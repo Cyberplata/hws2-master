@@ -1,5 +1,5 @@
 import { loadingReducer } from './loadingReducer'
-import { combineReducers, legacy_createStore } from 'redux'
+import { combineReducers, legacy_createStore as createStore } from 'redux'
 import { themeReducer } from '../../hw12/bll/themeReducer'
 
 const reducers = combineReducers({
@@ -7,9 +7,9 @@ const reducers = combineReducers({
     theme: themeReducer, // hw12
 })
 
-const store = legacy_createStore(reducers)
+export const store = createStore(reducers)
 
-export default store
+// export default store
 
 export type AppStoreType = ReturnType<typeof reducers>
 
