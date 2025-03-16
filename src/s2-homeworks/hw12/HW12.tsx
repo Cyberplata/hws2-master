@@ -1,4 +1,5 @@
 import React, {useEffect} from 'react'
+import type {AppStoreType} from "../hw10/bll/store";
 import s from './HW12.module.css'
 import s2 from '../../s1-main/App.module.css'
 import SuperSelect from '../hw07/common/c5-SuperSelect/SuperSelect'
@@ -20,7 +21,8 @@ const themes = [
 
 const HW12 = () => {
     // взять ид темы из редакса
-    const themeId = 1
+    // const themeId = 1
+    const themeId = useSelector((state: AppStoreType ) => state.theme.themeId) // ✅
 
     const change = (id: any) => { // дописать функцию
 
