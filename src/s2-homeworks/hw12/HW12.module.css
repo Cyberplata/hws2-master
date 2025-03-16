@@ -19,5 +19,16 @@ html {
 }
 
 .select {
+    text-transform: Capitalize;
+    box-sizing: border-box;
+    border: 1px solid rgb(50, 50, 50);
+    border-radius: 2px;
 
+
+    /*appearance: none; !* Убираем стандартную стрелку *!*/
+    /*padding-right: 40px; !* Оставляем место для кастомной стрелки *!*/
+    /*background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M7 10l5 5 5-5z" fill="black"/></svg>');*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: right 6px center; !* 6px отступ справа *!*/
+    /*background-size: 24px 24px;*/
 }
